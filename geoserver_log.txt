@@ -1,0 +1,102 @@
+2018-01-08 19:35:32,701 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2018-01-08 19:35:32,701 INFO [geoserver.wfs] - 
+Request: getCapabilities
+    acceptVersions:
+        version[0] = 2.0.0version[0] = 1.1.0version[0] = 1.0.0
+    baseUrl = http://127.0.0.1:8080/geoserver/
+    namespace = cite
+    service = WFS
+2018-01-08 19:35:32,757 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2018-01-08 19:35:32,757 INFO [geoserver.wfs] - 
+Request: describeFeatureType
+    service = WFS
+    version = 2.0.0
+    baseUrl = http://127.0.0.1:8080/geoserver/
+    typeName[0] = {http://www.opengeospatial.net/cite}the_layer
+    outputFormat = application/gml+xml; version=3.2
+2018-01-08 19:35:32,997 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2018-01-08 19:35:33,002 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = WFS
+    version = 2.0.0
+    baseUrl = http://127.0.0.1:8080/geoserver/
+    count = 100000000
+    outputFormat = application/gml+xml; version=3.2
+    resolve = none
+    resolveDepth = *
+    resolveTimeout = 300
+    resultType = results
+    startIndex = 0
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@174990f (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpression[0]:
+        abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+        typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
+        srsName = urn:ogc:def:crs:EPSG::4326
+        filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+2018-01-08 19:35:33,062 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 19:35:33,074 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2018-01-08 19:35:33,078 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = WFS
+    version = 2.0.0
+    baseUrl = http://127.0.0.1:8080/geoserver/
+    count = 100000000
+    outputFormat = application/gml+xml; version=3.2
+    resolve = none
+    resolveDepth = *
+    resolveTimeout = 300
+    resultType = results
+    startIndex = 0
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@2b1192 (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpression[0]:
+        abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+        typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
+        srsName = urn:ogc:def:crs:EPSG::4326
+        filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+2018-01-08 19:35:33,131 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2018-01-08 19:35:33,131 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 19:35:33,135 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = WFS
+    version = 2.0.0
+    baseUrl = http://127.0.0.1:8080/geoserver/
+    count = 100000000
+    outputFormat = application/gml+xml; version=3.2
+    resolve = none
+    resolveDepth = *
+    resolveTimeout = 300
+    resultType = results
+    startIndex = 0
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@15bfeee (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpression[0]:
+        abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+        typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
+        srsName = urn:ogc:def:crs:EPSG::4326
+        filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+2018-01-08 19:35:33,196 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 19:35:33,198 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2018-01-08 19:35:33,202 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = WFS
+    version = 2.0.0
+    baseUrl = http://127.0.0.1:8080/geoserver/
+    count = 100000000
+    outputFormat = application/gml+xml; version=3.2
+    resolve = none
+    resolveDepth = *
+    resolveTimeout = 300
+    resultType = results
+    startIndex = 0
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@1c1d395 (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpression[0]:
+        abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+        typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
+        srsName = urn:ogc:def:crs:EPSG::4326
+        filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
+2018-01-08 19:35:33,252 INFO [geoserver.servlets] - OutputStream was successfully aborted.
