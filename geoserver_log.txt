@@ -1,24 +1,320 @@
-2018-01-08 19:35:32,701 INFO [geoserver.wfs] - 
+2018-01-08 20:07:12,329 DEBUG [geoserver.logging] - Logging output to file '/usr/local/share/geoserver-2.12.1/data_dir/logs/geoserver.log'
+2018-01-08 20:07:12,329 DEBUG [geoserver.logging] - FINISHED CONFIGURING GEOSERVER LOGGING -------------------------
+2018-01-08 20:07:12,329 DEBUG [geoserver.config] - Persisted com.sun.proxy.$Proxy104 to logging.xml
+2018-01-08 20:07:12,330 DEBUG [org.geoserver] - Thread 50588 locking in mode READ
+2018-01-08 20:07:12,330 DEBUG [org.geoserver] - Thread 50588 releasing the lock in mode READ
+2018-01-08 20:07:12,340 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /web/, QueryString: null'; against '/web/**'
+2018-01-08 20:07:12,341 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /web/, QueryString: null with /web/**
+2018-01-08 20:07:12,344 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,345 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,345 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,345 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,345 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,345 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,345 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,345 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,345 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,345 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,496 DEBUG [geoserver.filters] - Creating a new http session inside the web UI (normal behavior)
+java.lang.Exception: Full stack trace for the session creation path
+	at org.geoserver.filters.SessionDebugFilter$SessionDebugWrapper.getSession(SessionDebugFilter.java:92)
+	at javax.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:270)
+	at javax.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:270)
+	at javax.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:270)
+	at org.apache.wicket.session.HttpSessionStore.getHttpSession(HttpSessionStore.java:95)
+	at org.apache.wicket.session.HttpSessionStore.getSessionId(HttpSessionStore.java:166)
+	at org.apache.wicket.Session.bind(Session.java:267)
+	at org.apache.wicket.Session.replaceSession(Session.java:520)
+	at org.geoserver.web.GeoServerApplication.onApplicationEvent(GeoServerApplication.java:417)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:167)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337)
+	at org.springframework.security.authentication.DefaultAuthenticationEventPublisher.publishAuthenticationSuccess(DefaultAuthenticationEventPublisher.java:84)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:213)
+	at org.geoserver.security.GeoServerSecurityManager.checkForDefaultAdminPassword(GeoServerSecurityManager.java:1493)
+	at org.geoserver.security.web.SecurityHomePageContentProvider$SecurityWarningsPanel.<init>(SecurityHomePageContentProvider.java:105)
+	at org.geoserver.security.web.SecurityHomePageContentProvider.getPageBodyComponent(SecurityHomePageContentProvider.java:47)
+	at org.geoserver.web.GeoServerHomePage$1.populateItem(GeoServerHomePage.java:129)
+	at org.apache.wicket.markup.html.list.ListView.onPopulate(ListView.java:523)
+	at org.apache.wicket.markup.repeater.AbstractRepeater.onBeforeRender(AbstractRepeater.java:124)
+	at org.apache.wicket.Component.internalBeforeRender(Component.java:950)
+	at org.apache.wicket.Component.beforeRender(Component.java:1018)
+	at org.apache.wicket.MarkupContainer.onBeforeRenderChildren(MarkupContainer.java:1836)
+	at org.apache.wicket.Component.onBeforeRender(Component.java:3916)
+	at org.apache.wicket.Page.onBeforeRender(Page.java:801)
+	at org.apache.wicket.Component.internalBeforeRender(Component.java:950)
+	at org.apache.wicket.Component.beforeRender(Component.java:1018)
+	at org.apache.wicket.Component.internalPrepareForRender(Component.java:2236)
+	at org.apache.wicket.Page.internalPrepareForRender(Page.java:242)
+	at org.apache.wicket.Component.render(Component.java:2325)
+	at org.apache.wicket.Page.renderPage(Page.java:1018)
+	at org.apache.wicket.request.handler.render.WebPageRenderer.renderPage(WebPageRenderer.java:124)
+	at org.apache.wicket.request.handler.render.WebPageRenderer.respond(WebPageRenderer.java:236)
+	at org.apache.wicket.core.request.handler.RenderPageRequestHandler.respond(RenderPageRequestHandler.java:175)
+	at org.apache.wicket.request.cycle.RequestCycle$HandlerExecutor.respond(RequestCycle.java:895)
+	at org.apache.wicket.request.RequestHandlerStack.execute(RequestHandlerStack.java:64)
+	at org.apache.wicket.request.cycle.RequestCycle.execute(RequestCycle.java:265)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequest(RequestCycle.java:222)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequestAndDetach(RequestCycle.java:293)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequestCycle(WicketFilter.java:261)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequest(WicketFilter.java:203)
+	at org.apache.wicket.protocol.http.WicketServlet.doGet(WicketServlet.java:137)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:157)
+	at org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:174)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at org.geoserver.filters.ThreadLocalsCleanupFilter.doFilter(ThreadLocalsCleanupFilter.java:28)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:75)
+	at org.geoserver.wms.animate.AnimatorFilter.doFilter(AnimatorFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter.doFilter(SpringDelegatingFilter.java:46)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.platform.AdvancedDispatchFilter.doFilter(AdvancedDispatchFilter.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:316)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter.doFilter(GeoServerAnonymousAuthenticationFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:205)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.geoserver.security.filter.GeoServerUserNamePasswordAuthenticationFilter.doFilter(GeoServerUserNamePasswordAuthenticationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:157)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:91)
+	at org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter$1.doFilter(GeoServerSecurityContextPersistenceFilter.java:53)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:213)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176)
+	at org.geoserver.security.GeoServerSecurityFilterChainProxy.doFilter(GeoServerSecurityFilterChainProxy.java:152)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.LoggingFilter.doFilter(LoggingFilter.java:88)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:89)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.GZIPFilter.doFilter(GZIPFilter.java:42)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SessionDebugFilter.doFilter(SessionDebugFilter.java:48)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.FlushSafeFilter.doFilter(FlushSafeFilter.java:44)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Unknown Source)
+2018-01-08 20:07:12,526 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:12,541 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /web/, QueryString: 2'; against '/web/**'
+2018-01-08 20:07:12,541 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /web/, QueryString: 2 with /web/**
+2018-01-08 20:07:12,544 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,544 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,544 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,545 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,545 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,545 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,545 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,545 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,545 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:12,545 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/]
+2018-01-08 20:07:12,545 DEBUG [geoserver.filters] - Compressing output for mimetype: text/html; charset=UTF-8
+2018-01-08 20:07:12,547 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:15,226 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /web/wicket/bookmarkable/org.geoserver.web.admin.globalsettingspage, QueryString: null'; against '/web/**'
+2018-01-08 20:07:15,226 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /web/wicket/bookmarkable/org.geoserver.web.admin.globalsettingspage, QueryString: null with /web/**
+2018-01-08 20:07:15,232 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,232 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,232 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,233 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,233 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,233 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,233 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,233 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,233 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,233 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,234 DEBUG [org.geoserver] - Thread 252 locking in mode READ
+2018-01-08 20:07:15,234 DEBUG [org.geoserver] - Thread 252 got the lock in mode READ
+2018-01-08 20:07:15,260 DEBUG [org.geoserver] - Thread 252 locking in mode READ
+2018-01-08 20:07:15,260 DEBUG [org.geoserver] - Thread 252 releasing the lock in mode READ
+2018-01-08 20:07:15,262 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:15,271 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /web/wicket/bookmarkable/org.geoserver.web.admin.globalsettingspage, QueryString: 5'; against '/web/**'
+2018-01-08 20:07:15,271 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /web/wicket/bookmarkable/org.geoserver.web.admin.globalsettingspage, QueryString: 5 with /web/**
+2018-01-08 20:07:15,277 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,277 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,277 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,277 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,277 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,277 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,277 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,277 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,277 DEBUG [geoserver.ows] - Could not a layer group named web
+2018-01-08 20:07:15,277 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/web/wicket/bookmarkable/org.geoserver.web.admin.GlobalSettingsPage]
+2018-01-08 20:07:15,278 DEBUG [geoserver.filters] - Compressing output for mimetype: text/html; charset=UTF-8
+2018-01-08 20:07:15,279 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:44,516 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/web/**'
+2018-01-08 20:07:44,516 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/gwc/rest/web/**'
+2018-01-08 20:07:44,516 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/'
+2018-01-08 20:07:44,516 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/j_spring_security_check'
+2018-01-08 20:07:44,516 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/j_spring_security_check/'
+2018-01-08 20:07:44,516 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/j_spring_security_logout'
+2018-01-08 20:07:44,517 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/j_spring_security_logout/'
+2018-01-08 20:07:44,517 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/rest/**'
+2018-01-08 20:07:44,517 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/gwc/rest/**'
+2018-01-08 20:07:44,517 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0'; against '/**'
+2018-01-08 20:07:44,517 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Request matched by universal pattern '/**'
+2018-01-08 20:07:44,517 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetCapabilities&ACCEPTVERSIONS=2.0.0,1.1.0,1.0.0 with /**
+2018-01-08 20:07:44,520 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,520 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,520 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,521 DEBUG [ows.OWSHandlerMapping] - Mapping [/cite/ows] to HandlerExecutionChain with handler [org.geoserver.ows.Dispatcher@1796b8c] and 1 interceptor
+2018-01-08 20:07:44,521 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,521 INFO [geoserver.wfs] - 
 Request: getServiceInfo
-2018-01-08 19:35:32,701 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,522 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,522 INFO [geoserver.wfs] - 
 Request: getCapabilities
     acceptVersions:
         version[0] = 2.0.0version[0] = 1.1.0version[0] = 1.0.0
     baseUrl = http://127.0.0.1:8080/geoserver/
     namespace = cite
     service = WFS
-2018-01-08 19:35:32,757 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,526 DEBUG [geoserver.filters] - Compressing output for mimetype: application/xml
+2018-01-08 20:07:44,529 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:44,584 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/web/**'
+2018-01-08 20:07:44,584 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/gwc/rest/web/**'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/j_spring_security_check'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/j_spring_security_check/'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/j_spring_security_logout'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/j_spring_security_logout/'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/rest/**'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/gwc/rest/**'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer'; against '/**'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Request matched by universal pattern '/**'
+2018-01-08 20:07:44,585 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=DescribeFeatureType&VERSION=2.0.0&TYPENAME=cite:the_layer with /**
+2018-01-08 20:07:44,589 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,589 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,589 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,590 DEBUG [ows.OWSHandlerMapping] - Mapping [/cite/ows] to HandlerExecutionChain with handler [org.geoserver.ows.Dispatcher@1796b8c] and 1 interceptor
+2018-01-08 20:07:44,590 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,591 INFO [geoserver.wfs] - 
 Request: getServiceInfo
-2018-01-08 19:35:32,757 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,591 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,592 INFO [geoserver.wfs] - 
 Request: describeFeatureType
     service = WFS
     version = 2.0.0
     baseUrl = http://127.0.0.1:8080/geoserver/
     typeName[0] = {http://www.opengeospatial.net/cite}the_layer
     outputFormat = application/gml+xml; version=3.2
-2018-01-08 19:35:32,997 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,592 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,596 DEBUG [geoserver.filters] - Compressing output for mimetype: application/gml+xml; version=3.2
+2018-01-08 20:07:44,596 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:44,852 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/web/**'
+2018-01-08 20:07:44,852 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/web/**'
+2018-01-08 20:07:44,852 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/'
+2018-01-08 20:07:44,852 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check'
+2018-01-08 20:07:44,852 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check/'
+2018-01-08 20:07:44,852 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout'
+2018-01-08 20:07:44,852 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout/'
+2018-01-08 20:07:44,853 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/rest/**'
+2018-01-08 20:07:44,853 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/**'
+2018-01-08 20:07:44,853 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/**'
+2018-01-08 20:07:44,853 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Request matched by universal pattern '/**'
+2018-01-08 20:07:44,853 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326 with /**
+2018-01-08 20:07:44,856 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,857 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,857 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,857 DEBUG [ows.OWSHandlerMapping] - Mapping [/cite/ows] to HandlerExecutionChain with handler [org.geoserver.ows.Dispatcher@1796b8c] and 1 interceptor
+2018-01-08 20:07:44,857 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:44,857 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,858 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,858 INFO [geoserver.wfs] - 
 Request: getServiceInfo
-2018-01-08 19:35:33,002 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,858 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:44,858 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,859 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,860 DEBUG [geoserver.requests] - Query is org.geoserver.wfs.request.Query$WFS20@123d2b5
+ To gt2: Query:
+   feature type: the_layer
+   filter: [  bbox POLYGON ((113.73869967609677 22.340646844963267, 113.73869967609677 22.964728244268905, 114.64987487770422 22.964728244268905, 114.64987487770422 22.340646844963267, 113.73869967609677 22.340646844963267)) ]
+   [properties:  ALL ]
+2018-01-08 20:07:44,861 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,861 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,862 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,862 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,862 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,862 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,862 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,862 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,862 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,863 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,863 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:44,863 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,863 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,863 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,863 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,864 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:44,864 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,864 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,864 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,864 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,864 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:44,864 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:44,866 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,866 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:44,866 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,866 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,866 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,867 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:44,867 INFO [geoserver.wfs] - 
 Request: getFeature
     service = WFS
     version = 2.0.0
@@ -30,16 +326,259 @@ Request: getFeature
     resolveTimeout = 300
     resultType = results
     startIndex = 0
-    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@174990f (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@109211a (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
     abstractQueryExpression[0]:
         abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
         typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
         srsName = urn:ogc:def:crs:EPSG::4326
         filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
-2018-01-08 19:35:33,062 INFO [geoserver.servlets] - OutputStream was successfully aborted.
-2018-01-08 19:35:33,074 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,867 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,868 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,869 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,869 DEBUG [geotools.xml] - building schema for schema: http://www.opengeospatial.net/cite
+2018-01-08 20:07:44,873 DEBUG [geoserver.wfs] - Unable to find user-defined schema location for: http://www.opengeospatial.net/cite. Using a built schema location by default: http://127.0.0.1:8080/geoserver/cite/wfs?service=WFS&version=2.0.0&request=DescribeFeatureType&typeName=cite%3Athe_layer
+2018-01-08 20:07:44,875 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:44,875 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,875 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:44,875 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,876 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,876 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,877 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,877 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:44,877 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,877 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,877 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,877 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,877 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:44,877 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,877 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,877 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,877 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,878 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:44,878 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:44,880 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,880 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:44,880 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,880 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,880 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,880 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:44,885 DEBUG [geoserver.filters] - Compressing output for mimetype: application/gml+xml; version=3.2
+2018-01-08 20:07:44,927 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 20:07:44,928 TRACE [geoserver.ows] - Client has closed stream
+java.lang.RuntimeException: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at org.geotools.xml.Encoder.encode(Encoder.java:781)
+	at org.geotools.xml.Encoder.encode(Encoder.java:614)
+	at org.geoserver.wfs.xml.GML32OutputFormat.encode(GML32OutputFormat.java:111)
+	at org.geoserver.wfs.xml.GML3OutputFormat.write(GML3OutputFormat.java:279)
+	at org.geoserver.wfs.WFSGetFeatureOutputFormat.write(WFSGetFeatureOutputFormat.java:196)
+	at org.geoserver.ows.Dispatcher.response(Dispatcher.java:1009)
+	at org.geoserver.ows.Dispatcher.handleRequestInternal(Dispatcher.java:272)
+	at org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:174)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at org.geoserver.filters.ThreadLocalsCleanupFilter.doFilter(ThreadLocalsCleanupFilter.java:28)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:75)
+	at org.geoserver.wms.animate.AnimatorFilter.doFilter(AnimatorFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter.doFilter(SpringDelegatingFilter.java:46)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.platform.AdvancedDispatchFilter.doFilter(AdvancedDispatchFilter.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:316)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter.doFilter(GeoServerAnonymousAuthenticationFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.geoserver.security.filter.GeoServerBasicAuthenticationFilter.doFilter(GeoServerBasicAuthenticationFilter.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:91)
+	at org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter$1.doFilter(GeoServerSecurityContextPersistenceFilter.java:53)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:213)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176)
+	at org.geoserver.security.GeoServerSecurityFilterChainProxy.doFilter(GeoServerSecurityFilterChainProxy.java:152)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.LoggingFilter.doFilter(LoggingFilter.java:88)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:89)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.GZIPFilter.doFilter(GZIPFilter.java:42)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SessionDebugFilter.doFilter(SessionDebugFilter.java:48)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.FlushSafeFilter.doFilter(FlushSafeFilter.java:44)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at com.sun.org.apache.xml.internal.serializer.ToStream.characters(Unknown Source)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerHandlerImpl.characters(Unknown Source)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:249)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:258)
+	at org.geotools.gml2.simple.GMLWriter.posList(GMLWriter.java:373)
+	at org.geotools.gml3.simple.LineStringEncoder.encode(LineStringEncoder.java:52)
+	at org.geotools.gml3.simple.PolygonEncoder.encodeRing(PolygonEncoder.java:84)
+	at org.geotools.gml3.simple.PolygonEncoder.encode(PolygonEncoder.java:68)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:63)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:35)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeValue(FeatureCollectionEncoderDelegate.java:196)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeFeature(FeatureCollectionEncoderDelegate.java:176)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encode(FeatureCollectionEncoderDelegate.java:130)
+	at org.geotools.xml.Encoder.encode(Encoder.java:778)
+	... 91 more
+Caused by: org.geoserver.ows.ClientStreamAbortedException
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:46)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.flushBuffer(Unknown Source)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.write(Unknown Source)
+	... 105 more
+Caused by: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:192)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:408)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:302)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:129)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:690)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:246)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:208)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:480)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:768)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:801)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:147)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:140)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:383)
+	at org.geoserver.filters.FlushSafeResponse$FlushSafeServletOutputStream.write(FlushSafeResponse.java:58)
+	at java.util.zip.DeflaterOutputStream.deflate(Unknown Source)
+	at java.util.zip.DeflaterOutputStream.write(Unknown Source)
+	at java.util.zip.GZIPOutputStream.write(Unknown Source)
+	at org.geoserver.filters.GZIPResponseStream.write(GZIPResponseStream.java:59)
+	at org.geoserver.filters.AlternativesResponseStream.write(AlternativesResponseStream.java:60)
+	at org.springframework.security.web.context.OnCommittedResponseWrapper$SaveContextServletOutputStream.write(OnCommittedResponseWrapper.java:540)
+	at org.vfny.geoserver.util.PartialBufferedOutputStream2.write(PartialBufferedOutputStream2.java:155)
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:44)
+	... 107 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:170)
+	... 128 more
+2018-01-08 20:07:44,931 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/web/**'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/web/**'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check/'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout/'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/rest/**'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/**'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/**'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Request matched by universal pattern '/**'
+2018-01-08 20:07:44,937 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326 with /**
+2018-01-08 20:07:44,947 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,947 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,947 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:44,947 DEBUG [ows.OWSHandlerMapping] - Mapping [/cite/ows] to HandlerExecutionChain with handler [org.geoserver.ows.Dispatcher@1796b8c] and 1 interceptor
+2018-01-08 20:07:44,948 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:44,948 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,948 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,948 INFO [geoserver.wfs] - 
 Request: getServiceInfo
-2018-01-08 19:35:33,078 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,948 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:44,948 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,949 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,950 DEBUG [geoserver.requests] - Query is org.geoserver.wfs.request.Query$WFS20@7ea36a
+ To gt2: Query:
+   feature type: the_layer
+   filter: [  bbox POLYGON ((113.73869967609677 22.340646844963267, 113.73869967609677 22.964728244268905, 114.64987487770422 22.964728244268905, 114.64987487770422 22.340646844963267, 113.73869967609677 22.340646844963267)) ]
+   [properties:  ALL ]
+2018-01-08 20:07:44,950 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,950 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,950 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,950 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,950 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,950 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,951 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,951 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,951 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,951 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,951 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:44,951 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,951 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,951 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,951 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,952 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:44,952 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,952 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,952 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,952 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,952 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:44,952 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:44,954 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,954 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:44,954 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,954 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,954 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,955 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:44,955 INFO [geoserver.wfs] - 
 Request: getFeature
     service = WFS
     version = 2.0.0
@@ -51,16 +590,259 @@ Request: getFeature
     resolveTimeout = 300
     resultType = results
     startIndex = 0
-    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@2b1192 (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@97c962 (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
     abstractQueryExpression[0]:
         abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
         typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
         srsName = urn:ogc:def:crs:EPSG::4326
         filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
-2018-01-08 19:35:33,131 INFO [geoserver.wfs] - 
+2018-01-08 20:07:44,955 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,956 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,957 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:44,957 DEBUG [geotools.xml] - building schema for schema: http://www.opengeospatial.net/cite
+2018-01-08 20:07:44,960 DEBUG [geoserver.wfs] - Unable to find user-defined schema location for: http://www.opengeospatial.net/cite. Using a built schema location by default: http://127.0.0.1:8080/geoserver/cite/wfs?service=WFS&version=2.0.0&request=DescribeFeatureType&typeName=cite%3Athe_layer
+2018-01-08 20:07:44,961 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:44,962 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,962 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:44,962 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,963 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,963 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,964 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,964 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:44,964 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:44,964 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,964 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,964 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,964 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:44,964 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:44,964 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,964 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:44,964 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,965 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:44,965 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:44,967 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:44,967 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:44,967 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:44,967 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:44,968 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:44,968 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:44,974 DEBUG [geoserver.filters] - Compressing output for mimetype: application/gml+xml; version=3.2
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/web/**'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/web/**'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check/'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout/'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/rest/**'
+2018-01-08 20:07:45,010 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/**'
+2018-01-08 20:07:45,011 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/**'
+2018-01-08 20:07:45,011 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Request matched by universal pattern '/**'
+2018-01-08 20:07:45,011 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326 with /**
+2018-01-08 20:07:45,014 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:45,014 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:45,014 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:45,014 DEBUG [ows.OWSHandlerMapping] - Mapping [/cite/ows] to HandlerExecutionChain with handler [org.geoserver.ows.Dispatcher@1796b8c] and 1 interceptor
+2018-01-08 20:07:45,015 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:45,015 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,015 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,015 INFO [geoserver.wfs] - 
 Request: getServiceInfo
-2018-01-08 19:35:33,131 INFO [geoserver.servlets] - OutputStream was successfully aborted.
-2018-01-08 19:35:33,135 INFO [geoserver.wfs] - 
+2018-01-08 20:07:45,015 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:45,015 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,016 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,017 DEBUG [geoserver.requests] - Query is org.geoserver.wfs.request.Query$WFS20@10305e
+ To gt2: Query:
+   feature type: the_layer
+   filter: [  bbox POLYGON ((113.73869967609677 22.340646844963267, 113.73869967609677 22.964728244268905, 114.64987487770422 22.964728244268905, 114.64987487770422 22.340646844963267, 113.73869967609677 22.340646844963267)) ]
+   [properties:  ALL ]
+2018-01-08 20:07:45,017 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,017 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,018 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,018 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,018 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,018 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,018 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,018 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,018 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,018 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,019 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:45,019 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,019 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,019 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,019 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,019 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:45,019 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,019 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,020 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,020 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,020 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:45,020 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:45,020 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 20:07:45,021 TRACE [geoserver.ows] - Client has closed stream
+java.lang.RuntimeException: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at org.geotools.xml.Encoder.encode(Encoder.java:781)
+	at org.geotools.xml.Encoder.encode(Encoder.java:614)
+	at org.geoserver.wfs.xml.GML32OutputFormat.encode(GML32OutputFormat.java:111)
+	at org.geoserver.wfs.xml.GML3OutputFormat.write(GML3OutputFormat.java:279)
+	at org.geoserver.wfs.WFSGetFeatureOutputFormat.write(WFSGetFeatureOutputFormat.java:196)
+	at org.geoserver.ows.Dispatcher.response(Dispatcher.java:1009)
+	at org.geoserver.ows.Dispatcher.handleRequestInternal(Dispatcher.java:272)
+	at org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:174)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at org.geoserver.filters.ThreadLocalsCleanupFilter.doFilter(ThreadLocalsCleanupFilter.java:28)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:75)
+	at org.geoserver.wms.animate.AnimatorFilter.doFilter(AnimatorFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter.doFilter(SpringDelegatingFilter.java:46)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.platform.AdvancedDispatchFilter.doFilter(AdvancedDispatchFilter.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:316)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter.doFilter(GeoServerAnonymousAuthenticationFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.geoserver.security.filter.GeoServerBasicAuthenticationFilter.doFilter(GeoServerBasicAuthenticationFilter.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:91)
+	at org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter$1.doFilter(GeoServerSecurityContextPersistenceFilter.java:53)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:213)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176)
+	at org.geoserver.security.GeoServerSecurityFilterChainProxy.doFilter(GeoServerSecurityFilterChainProxy.java:152)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.LoggingFilter.doFilter(LoggingFilter.java:88)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:89)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.GZIPFilter.doFilter(GZIPFilter.java:42)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SessionDebugFilter.doFilter(SessionDebugFilter.java:48)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.FlushSafeFilter.doFilter(FlushSafeFilter.java:44)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at com.sun.org.apache.xml.internal.serializer.ToStream.characters(Unknown Source)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerHandlerImpl.characters(Unknown Source)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:249)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:258)
+	at org.geotools.gml2.simple.GMLWriter.posList(GMLWriter.java:373)
+	at org.geotools.gml3.simple.LineStringEncoder.encode(LineStringEncoder.java:52)
+	at org.geotools.gml3.simple.PolygonEncoder.encodeRing(PolygonEncoder.java:84)
+	at org.geotools.gml3.simple.PolygonEncoder.encode(PolygonEncoder.java:68)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:63)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:35)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeValue(FeatureCollectionEncoderDelegate.java:196)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeFeature(FeatureCollectionEncoderDelegate.java:176)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encode(FeatureCollectionEncoderDelegate.java:130)
+	at org.geotools.xml.Encoder.encode(Encoder.java:778)
+	... 91 more
+Caused by: org.geoserver.ows.ClientStreamAbortedException
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:46)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.flushBuffer(Unknown Source)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.write(Unknown Source)
+	... 105 more
+Caused by: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:192)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:408)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:302)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:129)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:690)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:246)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:208)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:480)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:768)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:801)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:147)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:140)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:383)
+	at org.geoserver.filters.FlushSafeResponse$FlushSafeServletOutputStream.write(FlushSafeResponse.java:58)
+	at java.util.zip.DeflaterOutputStream.deflate(Unknown Source)
+	at java.util.zip.DeflaterOutputStream.write(Unknown Source)
+	at java.util.zip.GZIPOutputStream.write(Unknown Source)
+	at org.geoserver.filters.GZIPResponseStream.write(GZIPResponseStream.java:59)
+	at org.geoserver.filters.AlternativesResponseStream.write(AlternativesResponseStream.java:60)
+	at org.springframework.security.web.context.OnCommittedResponseWrapper$SaveContextServletOutputStream.write(OnCommittedResponseWrapper.java:540)
+	at org.vfny.geoserver.util.PartialBufferedOutputStream2.write(PartialBufferedOutputStream2.java:155)
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:44)
+	... 107 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:170)
+	... 128 more
+2018-01-08 20:07:45,022 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,023 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:45,024 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,024 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,024 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,024 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:45,024 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:45,024 INFO [geoserver.wfs] - 
 Request: getFeature
     service = WFS
     version = 2.0.0
@@ -72,16 +854,259 @@ Request: getFeature
     resolveTimeout = 300
     resultType = results
     startIndex = 0
-    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@15bfeee (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@1e8c501 (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
     abstractQueryExpression[0]:
         abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
         typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
         srsName = urn:ogc:def:crs:EPSG::4326
         filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
-2018-01-08 19:35:33,196 INFO [geoserver.servlets] - OutputStream was successfully aborted.
-2018-01-08 19:35:33,198 INFO [geoserver.wfs] - 
+2018-01-08 20:07:45,025 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,025 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,026 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,027 DEBUG [geotools.xml] - building schema for schema: http://www.opengeospatial.net/cite
+2018-01-08 20:07:45,030 DEBUG [geoserver.wfs] - Unable to find user-defined schema location for: http://www.opengeospatial.net/cite. Using a built schema location by default: http://127.0.0.1:8080/geoserver/cite/wfs?service=WFS&version=2.0.0&request=DescribeFeatureType&typeName=cite%3Athe_layer
+2018-01-08 20:07:45,032 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:45,032 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,032 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:45,032 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,033 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,033 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,033 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,033 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,033 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,033 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,033 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,033 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,034 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,034 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,034 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:45,034 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,034 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,034 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,034 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,034 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:45,034 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,034 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,035 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,035 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,035 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:45,035 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:45,037 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,037 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:45,037 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,037 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,037 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,037 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:45,044 DEBUG [geoserver.filters] - Compressing output for mimetype: application/gml+xml; version=3.2
+2018-01-08 20:07:45,084 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 20:07:45,084 TRACE [geoserver.ows] - Client has closed stream
+java.lang.RuntimeException: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at org.geotools.xml.Encoder.encode(Encoder.java:781)
+	at org.geotools.xml.Encoder.encode(Encoder.java:614)
+	at org.geoserver.wfs.xml.GML32OutputFormat.encode(GML32OutputFormat.java:111)
+	at org.geoserver.wfs.xml.GML3OutputFormat.write(GML3OutputFormat.java:279)
+	at org.geoserver.wfs.WFSGetFeatureOutputFormat.write(WFSGetFeatureOutputFormat.java:196)
+	at org.geoserver.ows.Dispatcher.response(Dispatcher.java:1009)
+	at org.geoserver.ows.Dispatcher.handleRequestInternal(Dispatcher.java:272)
+	at org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:174)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at org.geoserver.filters.ThreadLocalsCleanupFilter.doFilter(ThreadLocalsCleanupFilter.java:28)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:75)
+	at org.geoserver.wms.animate.AnimatorFilter.doFilter(AnimatorFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter.doFilter(SpringDelegatingFilter.java:46)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.platform.AdvancedDispatchFilter.doFilter(AdvancedDispatchFilter.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:316)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter.doFilter(GeoServerAnonymousAuthenticationFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.geoserver.security.filter.GeoServerBasicAuthenticationFilter.doFilter(GeoServerBasicAuthenticationFilter.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:91)
+	at org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter$1.doFilter(GeoServerSecurityContextPersistenceFilter.java:53)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:213)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176)
+	at org.geoserver.security.GeoServerSecurityFilterChainProxy.doFilter(GeoServerSecurityFilterChainProxy.java:152)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.LoggingFilter.doFilter(LoggingFilter.java:88)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:89)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.GZIPFilter.doFilter(GZIPFilter.java:42)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SessionDebugFilter.doFilter(SessionDebugFilter.java:48)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.FlushSafeFilter.doFilter(FlushSafeFilter.java:44)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at com.sun.org.apache.xml.internal.serializer.ToStream.characters(Unknown Source)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerHandlerImpl.characters(Unknown Source)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:249)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:258)
+	at org.geotools.gml2.simple.GMLWriter.posList(GMLWriter.java:373)
+	at org.geotools.gml3.simple.LineStringEncoder.encode(LineStringEncoder.java:52)
+	at org.geotools.gml3.simple.PolygonEncoder.encodeRing(PolygonEncoder.java:84)
+	at org.geotools.gml3.simple.PolygonEncoder.encode(PolygonEncoder.java:68)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:63)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:35)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeValue(FeatureCollectionEncoderDelegate.java:196)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeFeature(FeatureCollectionEncoderDelegate.java:176)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encode(FeatureCollectionEncoderDelegate.java:130)
+	at org.geotools.xml.Encoder.encode(Encoder.java:778)
+	... 91 more
+Caused by: org.geoserver.ows.ClientStreamAbortedException
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:46)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.flushBuffer(Unknown Source)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.write(Unknown Source)
+	... 105 more
+Caused by: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:192)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:408)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:302)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:129)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:690)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:246)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:208)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:480)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:768)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:801)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:147)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:140)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:383)
+	at org.geoserver.filters.FlushSafeResponse$FlushSafeServletOutputStream.write(FlushSafeResponse.java:58)
+	at java.util.zip.DeflaterOutputStream.deflate(Unknown Source)
+	at java.util.zip.DeflaterOutputStream.write(Unknown Source)
+	at java.util.zip.GZIPOutputStream.write(Unknown Source)
+	at org.geoserver.filters.GZIPResponseStream.write(GZIPResponseStream.java:59)
+	at org.geoserver.filters.AlternativesResponseStream.write(AlternativesResponseStream.java:60)
+	at org.springframework.security.web.context.OnCommittedResponseWrapper$SaveContextServletOutputStream.write(OnCommittedResponseWrapper.java:540)
+	at org.vfny.geoserver.util.PartialBufferedOutputStream2.write(PartialBufferedOutputStream2.java:155)
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:44)
+	... 107 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:170)
+	... 128 more
+2018-01-08 20:07:45,087 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
+2018-01-08 20:07:45,092 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/web/**'
+2018-01-08 20:07:45,092 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/web/**'
+2018-01-08 20:07:45,092 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_check/'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/j_spring_security_logout/'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/rest/**'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/gwc/rest/**'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Checking match of request : 'Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326'; against '/**'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Request matched by universal pattern '/**'
+2018-01-08 20:07:45,093 DEBUG [security.IncludeQueryStringAntPathRequestMatcher] - Matched Path: /cite/ows, QueryString: SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=cite:the_layer&STARTINDEX=0&COUNT=100000000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=22.34064684496326691,113.7386996760967719,22.96472824426890469,114.64987487770422092,urn:ogc:def:crs:EPSG::4326 with /**
+2018-01-08 20:07:45,097 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:45,097 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:45,098 TRACE [ows.OWSHandlerMapping] - No handler mapping found for [/cite/ows]
+2018-01-08 20:07:45,098 DEBUG [ows.OWSHandlerMapping] - Mapping [/cite/ows] to HandlerExecutionChain with handler [org.geoserver.ows.Dispatcher@1796b8c] and 1 interceptor
+2018-01-08 20:07:45,098 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:45,098 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,098 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,098 INFO [geoserver.wfs] - 
 Request: getServiceInfo
-2018-01-08 19:35:33,202 INFO [geoserver.wfs] - 
+2018-01-08 20:07:45,098 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation  only.
+2018-01-08 20:07:45,098 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,099 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,100 DEBUG [geoserver.requests] - Query is org.geoserver.wfs.request.Query$WFS20@30572e
+ To gt2: Query:
+   feature type: the_layer
+   filter: [  bbox POLYGON ((113.73869967609677 22.340646844963267, 113.73869967609677 22.964728244268905, 114.64987487770422 22.964728244268905, 114.64987487770422 22.340646844963267, 113.73869967609677 22.340646844963267)) ]
+   [properties:  ALL ]
+2018-01-08 20:07:45,100 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,100 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,101 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,101 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,101 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,101 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,101 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,101 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,101 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,101 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,101 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:45,102 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,102 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,102 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,102 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,102 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:45,102 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,102 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,102 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,102 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,102 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:45,103 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:45,105 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,105 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:45,105 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,105 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,105 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,105 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:45,105 INFO [geoserver.wfs] - 
 Request: getFeature
     service = WFS
     version = 2.0.0
@@ -93,10 +1118,198 @@ Request: getFeature
     resolveTimeout = 300
     resultType = results
     startIndex = 0
-    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@1c1d395 (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
+    abstractQueryExpressionGroup[0] = wfs:abstractQueryExpression=net.opengis.wfs20.impl.QueryTypeImpl@18754f9 (handle: null) (abstractProjectionClause: null, abstractSelectionClause: [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ], abstractSortingClause: null, aliases: null, typeNames: [{http://www.opengeospatial.net/cite}the_layer]) (featureVersion: null, srsName: urn:ogc:def:crs:EPSG::4326, filter: null, propertyNames: null, sortBy: null)
     abstractQueryExpression[0]:
         abstractSelectionClause = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
         typeNames[0] = {http://www.opengeospatial.net/cite}the_layer
         srsName = urn:ogc:def:crs:EPSG::4326
         filter = [  bbox POLYGON ((22.340646844963267 113.73869967609677, 22.340646844963267 114.64987487770422, 22.964728244268905 114.64987487770422, 22.964728244268905 113.73869967609677, 22.340646844963267 113.73869967609677)) ]
-2018-01-08 19:35:33,252 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 20:07:45,106 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,106 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,107 DEBUG [config.impl] - Could not locate service of type interface org.geoserver.wfs.WFSInfo in workspace WorkspaceInfoImpl[cite], available services were [WMSInfoImpl[WMS], WMTSInfoImpl[WMTS], WFSInfoImpl[WFS], WCSInfoImpl[WCS]]
+2018-01-08 20:07:45,107 DEBUG [geotools.xml] - building schema for schema: http://www.opengeospatial.net/cite
+2018-01-08 20:07:45,111 DEBUG [geoserver.wfs] - Unable to find user-defined schema location for: http://www.opengeospatial.net/cite. Using a built schema location by default: http://127.0.0.1:8080/geoserver/cite/wfs?service=WFS&version=2.0.0&request=DescribeFeatureType&typeName=cite%3Athe_layer
+2018-01-08 20:07:45,113 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:45,113 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,113 DEBUG [geotools.util] - InterpolationConverterFactory can be applied from Strings to Interpolation only.
+2018-01-08 20:07:45,113 DEBUG [geotools.util] - CRSConverterFactory can be applied from Strings to CRS  only.
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,114 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,114 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,115 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,115 TRACE [index.quadtree] - QuadTree opened
+2018-01-08 20:07:45,115 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.qix by ShapefileDataStore-sz_sec2drainage_py
+2018-01-08 20:07:45,115 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,115 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,115 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,115 TRACE [data.shapefile] - Shapefile Reader has been opened. Number open: 1
+2018-01-08 20:07:45,115 TRACE [data.shapefile] - IndexFile has been opened. Number open: 1
+2018-01-08 20:07:45,115 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,115 TRACE [data.shapefile] - Reading from file...
+2018-01-08 20:07:45,116 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,116 TRACE [data.shapefile] - Dbase File Reader has been opened. Number open: 1
+2018-01-08 20:07:45,116 TRACE [data.shapefile] - Filling buffer...
+2018-01-08 20:07:45,118 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shp by org.geotools.data.shapefile.shp.ShapefileReader
+2018-01-08 20:07:45,118 TRACE [data.shapefile] - Shapefile Reader has been closed. Number open: 0
+2018-01-08 20:07:45,118 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.shx by org.geotools.data.shapefile.shp.IndexFile
+2018-01-08 20:07:45,118 TRACE [data.shapefile] - IndexFile has been closed. Number open: 0
+2018-01-08 20:07:45,118 DEBUG [data.shapefile] - Read lock: file:/usr/local/share/geoserver-2.12.1/data_dir/data/shapefiles/sz_sec2drainage_py.dbf by org.geotools.data.shapefile.dbf.DbaseFileReader
+2018-01-08 20:07:45,118 TRACE [data.shapefile] - Dbase File Reader has been closed. Number open: 0
+2018-01-08 20:07:45,122 DEBUG [geoserver.filters] - Compressing output for mimetype: application/gml+xml; version=3.2
+2018-01-08 20:07:45,167 INFO [geoserver.servlets] - OutputStream was successfully aborted.
+2018-01-08 20:07:45,167 TRACE [geoserver.ows] - Client has closed stream
+java.lang.RuntimeException: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at org.geotools.xml.Encoder.encode(Encoder.java:781)
+	at org.geotools.xml.Encoder.encode(Encoder.java:614)
+	at org.geoserver.wfs.xml.GML32OutputFormat.encode(GML32OutputFormat.java:111)
+	at org.geoserver.wfs.xml.GML3OutputFormat.write(GML3OutputFormat.java:279)
+	at org.geoserver.wfs.WFSGetFeatureOutputFormat.write(WFSGetFeatureOutputFormat.java:196)
+	at org.geoserver.ows.Dispatcher.response(Dispatcher.java:1009)
+	at org.geoserver.ows.Dispatcher.handleRequestInternal(Dispatcher.java:272)
+	at org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:174)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at org.geoserver.filters.ThreadLocalsCleanupFilter.doFilter(ThreadLocalsCleanupFilter.java:28)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:75)
+	at org.geoserver.wms.animate.AnimatorFilter.doFilter(AnimatorFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:71)
+	at org.geoserver.filters.SpringDelegatingFilter.doFilter(SpringDelegatingFilter.java:46)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.platform.AdvancedDispatchFilter.doFilter(AdvancedDispatchFilter.java:50)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:316)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter.doFilter(GeoServerAnonymousAuthenticationFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.geoserver.security.filter.GeoServerBasicAuthenticationFilter.doFilter(GeoServerBasicAuthenticationFilter.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:69)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:91)
+	at org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter$1.doFilter(GeoServerSecurityContextPersistenceFilter.java:53)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:73)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:92)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:213)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176)
+	at org.geoserver.security.GeoServerSecurityFilterChainProxy.doFilter(GeoServerSecurityFilterChainProxy.java:152)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.LoggingFilter.doFilter(LoggingFilter.java:88)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:89)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.GZIPFilter.doFilter(GZIPFilter.java:42)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.SessionDebugFilter.doFilter(SessionDebugFilter.java:48)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.geoserver.filters.FlushSafeFilter.doFilter(FlushSafeFilter.java:44)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.xml.sax.SAXException
+org.geoserver.ows.ClientStreamAbortedException
+	at com.sun.org.apache.xml.internal.serializer.ToStream.characters(Unknown Source)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerHandlerImpl.characters(Unknown Source)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:249)
+	at org.geotools.gml2.simple.GMLWriter.characters(GMLWriter.java:258)
+	at org.geotools.gml2.simple.GMLWriter.posList(GMLWriter.java:373)
+	at org.geotools.gml3.simple.LineStringEncoder.encode(LineStringEncoder.java:52)
+	at org.geotools.gml3.simple.PolygonEncoder.encodeRing(PolygonEncoder.java:84)
+	at org.geotools.gml3.simple.PolygonEncoder.encode(PolygonEncoder.java:68)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:63)
+	at org.geotools.gml3.simple.MultiPolygonEncoder.encode(MultiPolygonEncoder.java:35)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeValue(FeatureCollectionEncoderDelegate.java:196)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encodeFeature(FeatureCollectionEncoderDelegate.java:176)
+	at org.geotools.gml2.simple.FeatureCollectionEncoderDelegate.encode(FeatureCollectionEncoderDelegate.java:130)
+	at org.geotools.xml.Encoder.encode(Encoder.java:778)
+	... 91 more
+Caused by: org.geoserver.ows.ClientStreamAbortedException
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:46)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.flushBuffer(Unknown Source)
+	at com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered.write(Unknown Source)
+	... 105 more
+Caused by: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:192)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:408)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:302)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:129)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:690)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:246)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:208)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:480)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:768)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:801)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:147)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:140)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:383)
+	at org.geoserver.filters.FlushSafeResponse$FlushSafeServletOutputStream.write(FlushSafeResponse.java:58)
+	at java.util.zip.DeflaterOutputStream.deflate(Unknown Source)
+	at java.util.zip.DeflaterOutputStream.write(Unknown Source)
+	at java.util.zip.GZIPOutputStream.write(Unknown Source)
+	at org.geoserver.filters.GZIPResponseStream.write(GZIPResponseStream.java:59)
+	at org.geoserver.filters.AlternativesResponseStream.write(AlternativesResponseStream.java:60)
+	at org.springframework.security.web.context.OnCommittedResponseWrapper$SaveContextServletOutputStream.write(OnCommittedResponseWrapper.java:540)
+	at org.vfny.geoserver.util.PartialBufferedOutputStream2.write(PartialBufferedOutputStream2.java:155)
+	at org.geoserver.ows.DispatcherOutputStream.write(DispatcherOutputStream.java:44)
+	... 107 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:170)
+	... 128 more
+2018-01-08 20:07:45,169 DEBUG [filter.GeoServerSecurityContextPersistenceFilter$1] - SecurityContextHolder now cleared, as request processing completed
